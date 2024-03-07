@@ -9,3 +9,12 @@ service:
     http:
       port: 3000
       targetPort: 3000
+resources:
+  jotd-dns:
+    type: dns
+  jotd-route:
+    type: route
+    params:
+      path: /
+      port: 3000
+      host: ${resources.jotd-dns.host}
