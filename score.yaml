@@ -1,0 +1,11 @@
+apiVersion: score.dev/v1b1
+metadata:
+  name: barry
+containers:
+  jotd:
+    image: .
+service:
+  ports:
+    http:
+      port: 3000
+      targetPort: 3000
